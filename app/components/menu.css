@@ -1,0 +1,152 @@
+.menu-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: left bottom;
+}
+
+.menu-toggle {
+  position: relative;
+  width: 3rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-toggle p {
+  position: absolute;
+  will-change: transform, opacity;
+  user-select: none;
+}
+
+.menu-toggle p#menu-close {
+  color: #ffffff;
+}
+
+.menu-toggle p#menu-close {
+  opacity: 0;
+}
+
+.menu-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100lvh;
+  background-color: #000;
+  z-index: 20;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+.menu-items {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  padding: 4.5em;
+  display: flex;
+  gap: 2.5em;
+}
+
+.col-lg {
+  flex: 3;
+}
+
+.col-sm {
+  flex: 2;
+}
+
+.menu-items .col-lg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-preview-img {
+  position: relative;
+  display: flex;
+  width: 45%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.menu-preview-img img {
+  position: absolute;
+  will-change: transform, opacity;
+}
+
+.menu-items .col-sm {
+  padding: 2.5em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+}
+
+.menu-links,
+.menu-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.link,
+.social {
+  padding-bottom: 6px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.link a,
+.social a {
+  display: inline-block;
+  will-change: transform;
+  transition: color 0.5s;
+  user-select: none;
+  text-decoration: none;
+}
+
+.link a {
+  font-size: 3.5rem;
+  letter-spacing: -0.1rem;
+}
+
+.social a {
+  color: oklch(55.1% 0.027 264.364);
+}
+
+.social a:hover {
+  color: #fff;
+}
+
+.link a::after,
+.social a::after,
+.menu-footer a::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  top: 98.5%;
+  left: 0;
+  background: #fff;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s cubic-bezier(0.6, 0, 0.4, 1);
+}
+
+.link a:hover::after,
+.social a:hover::after,
+.menu-footer a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media (max-width: 768px) {
+  .menu-items .col-lg {
+    display: none;
+  }
+
+  .link a::after,
+  .social a::after,
+  .menu-footer a::after {
+    display: none;
+  }
+}

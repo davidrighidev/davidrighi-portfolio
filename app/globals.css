@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --breakpoint-3xl: 130rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+::-moz-selection {
+  background: rgba(27, 182, 248, 0.592);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+::selection {
+  background: rgba(27, 182, 248, 0.592);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BUTTONS */
+.btn,
+.btn-light {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: 1px solid;
+  border-radius: 9999px;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.btn span,
+.btn-light span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn::before,
+.btn-light::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  transition: height 0.3s ease;
+  z-index: 1;
+}
+
+.btn {
+  border-color: black;
+  color: black;
+}
+
+.btn::before {
+  background: black;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn:hover::before {
+  height: 100%;
+}
+
+.btn-light {
+  border-color: oklch(97% 0.001 106.424);
+  color: oklch(97% 0.001 106.424);
+}
+
+.btn-light::before {
+  background: oklch(97% 0.001 106.424);
+}
+
+.btn-light:hover {
+  color: black;
+}
+
+.btn-light:hover::before {
+  height: 100%;
+}
+
+@media (width < 40rem /* 640px */) {
+  .btn,
+  .btn-light {
+    padding: 7px 15px;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }

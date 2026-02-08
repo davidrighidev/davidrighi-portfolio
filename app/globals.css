@@ -1,7 +1,19 @@
 @import "tailwindcss";
 
-@theme {
-  --breakpoint-3xl: 130rem;
+@layer theme {
+  @theme {
+    --breakpoint-3xl: 130rem;
+  }
+}
+
+@layer utilities {
+  .font-accent {
+    font-family: var(--font-playfair-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-geist-mono);
+  }
 }
 
 ::-moz-selection {

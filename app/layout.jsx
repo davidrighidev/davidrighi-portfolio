@@ -1,9 +1,9 @@
 import { Geist_Mono, Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import "./components/menu.css";
-import Menu from "./components/Menu";
-import Footer from "./components/Footer";
+import "./(root)/components/menu.css";
+import Menu from "./(root)/components/Menu";
+import Footer from "./(root)/components/Footer";
 
 const switzerSans = localFont({
   src: [
@@ -35,7 +35,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${playfairSans.variable} ${switzerSans.className} ${switzerSans.variable} ${geistMono.variable} antialiased overflow-x-hidden font-sans`}
       >
-        <Menu />
         {children}
 
         <Footer />

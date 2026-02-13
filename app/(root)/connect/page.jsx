@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Copy from "../components/Copy";
+import Copy from "../(root)/components/Copy";
 
 const Connect = () => {
   return (

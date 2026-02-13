@@ -7,7 +7,12 @@ import { SplitText } from "gsap/SplitText";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-const Copy = ({ children, animateOnScroll = true, delay = 0 }) => {
+const Copy = ({
+  children,
+  animateOnScroll = true,
+  delay = 0,
+  fade = false,
+}) => {
   const containerRef = useRef(null);
   const splitRef = useRef([]);
   const triggers = useRef([]);
@@ -43,7 +48,8 @@ const Copy = ({ children, animateOnScroll = true, delay = 0 }) => {
       lines.current.push(...split.lines);
     });
 
-    gsap.set(lines.current, { y: "100%" });
+    // Apply initial styles
+    gsap.set(lines.current, { y: "100%", opacity: fade ? 0 : 1 });
 
     const animationProps = {
       y: "0%",
@@ -51,6 +57,7 @@ const Copy = ({ children, animateOnScroll = true, delay = 0 }) => {
       stagger: 0.1,
       ease: "power4.out",
       delay,
+      opacity: fade ? 1 : undefined, // animate opacity only if fade is true
     };
 
     if (animateOnScroll) {
@@ -94,7 +101,7 @@ const Copy = ({ children, animateOnScroll = true, delay = 0 }) => {
         window.removeEventListener("load", runSplit);
       };
     },
-    { scope: containerRef, dependencies: [animateOnScroll, delay] },
+    { scope: containerRef, dependencies: [animateOnScroll, delay, fade] },
   );
 
   if (React.Children.count(children) === 1) {

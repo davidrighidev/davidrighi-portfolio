@@ -5,37 +5,31 @@
   "thumbnail": "/collections/dorfturnier/dorfturnier3.jpg",
   "images": [
     {
-      "src": "https://picsum.photos/200/300?random=1",
-      "width": 200,
-      "height": 300
+      "src": "/collections/dorfturnier/dorfturnier1.jpg"
     },
     {
-      "src": "https://picsum.photos/250/400?random=2",
-      "width": 250,
-      "height": 400
+      "src": "/collections/dorfturnier/dorfturnier2.jpg"
     },
     {
-      "src": "https://picsum.photos/450/350?random=6",
-      "width": 450,
-      "height": 350
+      "src": "/collections/dorfturnier/dorfturnier3.jpg"
     },
     {
-      "src": "https://picsum.photos/300/300?random=3",
+      "src": "https://picsum.photos/300/300",
       "width": 300,
       "height": 300
     },
     {
-      "src": "https://picsum.photos/350/250?random=4",
+      "src": "https://picsum.photos/350/250",
       "width": 350,
       "height": 250
     },
     {
-      "src": "https://picsum.photos/400/500?random=5",
+      "src": "https://picsum.photos/400/500",
       "width": 400,
       "height": 500
     },
     {
-      "src": "https://picsum.photos/450/350?random=6",
+      "src": "https://picsum.photos/450/350",
       "width": 450,
       "height": 350
     }

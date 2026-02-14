@@ -4,6 +4,16 @@ import gsap from "gsap";
 
 const HeroSection = () => {
   useEffect(() => {
+    const heroContent = document.querySelector(
+      ".hidden.flex-col.uppercase.font-semibold",
+    );
+
+    // Make it visible before animating
+    if (heroContent) {
+      heroContent.classList.remove("hidden");
+      heroContent.classList.add("flex");
+    }
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         defaults: {
@@ -56,8 +66,8 @@ const HeroSection = () => {
       />
 
       <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent"></div>
-
-      <div className="flex flex-col uppercase font-semibold transform-none absolute bottom-[2vh] lg:bottom-[7vh] left-8 right-8">
+      {/* next div is hidden */}
+      <div className="hidden flex-col uppercase font-semibold transform-none absolute bottom-[2vh] lg:bottom-[7vh] left-8 right-8">
         <div className="overflow-hidden max-lg:hidden mb-2 lg:mb-0 lg:w-full relative mx-auto lg:mx-0">
           <div className="flex justify-between w-full transform-none">
             <p className="text-[clamp(14px,1.2vw,20px)] text-neutral-300 uppercase block">
@@ -115,11 +125,11 @@ const HeroSection = () => {
           className="rotate-5 w-full h-full"
         />
       </div>
-      <div className="absolute overflow-hidden w-auto h-7 md:h-15 top-50 right-[16vw] md:top-[30vh] md:right-[26vw] z-0">
+      <div className="absolute overflow-hidden w-auto h-11 p-2 md:h-18 top-50 right-[16vw] md:top-[30vh] md:right-[26vw] z-0">
         <img
           src="/assets/icons/scribble-arrow.svg"
           alt=""
-          className="rotate-30"
+          className="rotate-30 w-full h-full"
         />
       </div>
     </section>

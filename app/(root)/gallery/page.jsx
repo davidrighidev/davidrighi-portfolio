@@ -1,5 +1,6 @@
 import React from "react";
 import Gallery from "./Gallery";
+import Copy from "../components/Copy";
 export const metadata = {
   title: "Gallery",
 };

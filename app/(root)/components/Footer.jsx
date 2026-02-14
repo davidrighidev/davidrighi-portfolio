@@ -42,7 +42,7 @@ const Footer = () => {
     <footer className="bg-white z-10 sm:px-10 px-5 h-65 flex flex-col justify-center gap-8 w-screen">
       <div className="flex flex-col sm:flex-row max-sm:gap-5 items-center justify-center">
         <div className="font-medium md:text-5xl text-3xl flex-1">
-          <p>© 2025 David Righi</p>
+          <p>© 2026 David Righi</p>
           <p>All rights reserved.</p>
         </div>
         <div className="">

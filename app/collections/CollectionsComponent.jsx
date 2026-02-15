@@ -6,8 +6,8 @@ import {
   Link,
   ChevronLeft,
   ChevronRight,
-  Minimize,
   ArrowUp,
+  X,
 } from "lucide-react";
 
 import Image from "next/image";
@@ -23,6 +23,8 @@ export default function CollectionsComponent({ data }) {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
   const scrollRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   // Copy URL
   const copyUrl = () => {
@@ -31,8 +33,17 @@ export default function CollectionsComponent({ data }) {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  //
-  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    if (!isClient) return;
+
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, [isClient]);
 
   useEffect(() => {
     setIsClient(true);
@@ -223,7 +234,10 @@ export default function CollectionsComponent({ data }) {
         index={index}
         slides={slides}
         plugins={[Download]}
-        animation={{ swipe: 0, fade: 0 }}
+        animation={{
+          swipe: isMobile ? 300 : 0,
+          fade: 0,
+        }}
         on={{
           view: ({ index }) => setIndex(index),
         }}
@@ -233,21 +247,21 @@ export default function CollectionsComponent({ data }) {
         }}
         render={{
           iconClose: () => (
-            <Minimize
+            <X
               strokeWidth={1.2}
-              className="w-7 h-7 mr-5 text-neutral-500 hover:text-neutral-900 transition-colors"
+              className="w-7 h-7 sm:mr-5 text-neutral-500 hover:text-neutral-900 transition-colors"
             />
           ),
           iconPrev: () => (
             <ChevronLeft
               strokeWidth={1}
-              className="w-10 h-10 text-neutral-700 hover:text-neutral-900 transition-colors"
+              className="w-10 h-10 max-sm:hidden text-neutral-700 hover:text-neutral-900 transition-colors"
             />
           ),
           iconNext: () => (
             <ChevronRight
               strokeWidth={1}
-              className="w-10 h-10 text-neutral-700 hover:text-neutral-900 transition-colors"
+              className="w-10 h-10 max-sm:hidden text-neutral-700 hover:text-neutral-900 transition-colors"
             />
           ),
           iconDownload: () => (
@@ -257,7 +271,7 @@ export default function CollectionsComponent({ data }) {
             />
           ),
           slide: ({ slide }) => (
-            <div className="relative w-full h-screen flex items-center justify-center">
+            <div className="relative w-full h-screen max-sm:py-5 flex items-center justify-center">
               <div className="relative inline-block my-10">
                 <img
                   src={slide.src}

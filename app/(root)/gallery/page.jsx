@@ -24,7 +24,7 @@ const page = () => {
               been, the people I’ve met, and the way I see the world.
             </div>
           </div>
-          <div className="font-accent italic text-neutral-600 text-5xl mr-20 flex flex-col">
+          <div className="font-accent hidden lg:flex italic text-neutral-600 text-5xl mr-20 flex-col">
             <div>light.</div>
             <div className="text-neutral-400">emotion.</div>
             <div>movement.</div>

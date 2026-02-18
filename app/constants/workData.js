@@ -1,0 +1,82 @@
+export const workPages = {
+  dolomiayachts: {
+    url: "/work/dolomiayachts",
+    strokeColor: "#193153",
+    client: "Dolomia Yachts",
+    title: "The art of luxury",
+    workCardTitle: "Dolomia Yachts",
+    description:
+      "Dolomia Yachts is an Italian shipyard based in South Tyrol that designs and builds high-end, sustainable luxury power catamarans. They blend advanced, eco-friendly technology with Italian design to create spacious, efficient, and customizable multihull vessels.",
+    thumbnail: "/assets/work/dolomiayachts/Dolomia2.jpg",
+    work: [
+      "Creative Direction",
+      "Brand Research",
+      "Rebranding",
+      "Brand Guidelines",
+    ],
+    website: "dolomiayachts.com",
+    images: [
+      "/assets/work/dolomiayachts/Dolomia2.jpg",
+      "/assets/work/dolomiayachts/Dolomia1.png",
+      "/assets/work/dolomiayachts/Dolomia5.png",
+      "/assets/work/dolomiayachts/Dolomia6.png",
+      "/assets/work/dolomiayachts/Dolomia3.png",
+      "/assets/work/dolomiayachts/Dolomia4.png",
+      "/assets/work/dolomiayachts/main.jpg",
+    ],
+  },
+  dorfturnier2025: {
+    url: "/work/dorfturnier2025",
+    strokeColor: "#f5ae15",
+    client: "SV Lana",
+    title: "Beachvolley in Motion",
+    workCardTitle: "Dorfturnier 2025",
+    description:
+      "Photographed over 500 action-packed moments at Lana’s annual Dorfturnier, capturing the intensity, energy, and excitement of beach volleyball matches.",
+    thumbnail: "/assets/work/dorfturnier2025/dorfturnier1.jpg",
+    work: ["Photography", "Editing", "Photolibrary supply"],
+    images: [
+      "/assets/work/dorfturnier2025/dorfturnier1.jpg",
+      "/assets/work/dorfturnier2025/dorfturnier2.jpg",
+      "/assets/work/dorfturnier2025/dorfturnier3.jpg",
+      "/assets/work/dorfturnier2025/dorfturnier4.jpg",
+    ],
+  },
+  japan: {
+    url: "/work/japan",
+    strokeColor: "#3a8746",
+    client: "Personal Project",
+    title: "Japan Through Motion",
+    workCardTitle: "Japan",
+    description:
+      "A visual journey across Japan, exploring urban contrasts and quiet landscapes through photography and film. From the fast rhythm of city streets to calm, traditional settings, the project combines still imagery with a cinematic travel video to capture the atmosphere, culture, and movement of each location.",
+    thumbnail: "/assets/work/japan/japan1.jpg",
+    work: ["Photography", "Video Production", "Editing"],
+    images: [
+      "/assets/work/japan/japan2.jpg",
+      "/assets/work/japan/japan3.jpg",
+      "/assets/work/japan/japan1.jpg",
+      "/assets/work/japan/japan4.jpg",
+      "/assets/work/japan/japan5.jpg",
+      "/assets/work/japan/japan6.jpg",
+    ],
+  },
+  apm50: {
+    url: "/work/apm50",
+    strokeColor: "#f51537",
+    client: "Private Event",
+    title: "A Night to Remember",
+    workCardTitle: "Birthday Event",
+    description:
+      "Three friends came together to celebrate their 50th birthday with over a hundred guests, a private DJ, and a night full of dancing, laughter, and speeches. The evening unfolded with moments of joy, surprise, and connection, each captured in a curated gallery that preserves the energy and spirit of a milestone celebration shared among close friends and family.",
+    thumbnail: "/assets/work/apm50/img2.jpg",
+    work: ["Photography", "Editing", "Photolibrary supply"],
+    images: [
+      "/assets/work/apm50/img2.jpg",
+      "/assets/work/apm50/img108.jpg",
+      "/assets/work/apm50/img18.jpg",
+      "/assets/work/apm50/img19.jpg",
+      "/assets/work/apm50/img20.jpg",
+    ],
+  },
+};

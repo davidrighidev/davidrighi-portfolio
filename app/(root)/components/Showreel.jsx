@@ -29,7 +29,7 @@ const Showreel = () => {
   }, []);
 
   return (
-    <section className="px-2 sm:px-10 py-10">
+    <section className="px-2 sm:px-10 py-10 bg-black">
       <div className="max-w-4xl mx-auto">
         {/* Container für 16:9 */}
         <div className="relative w-full pb-[56.25%]">
